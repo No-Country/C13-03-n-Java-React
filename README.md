@@ -10,19 +10,19 @@ Considerando que este procedimiento existe para los casos de emergencia donde ha
 
 ## Setup
 
-Clone the project
+Clonar el proyecto
 
 ```bash
   git clone https://github.com/No-Country/C13-03-n-Java-React.git
 ```
 
-Install front dependencies
+Instalar dependencias
 
 ```bash
-  npm install
+  npm i
 ```
 
-Start front server
+Iniciar la aplicación
 
 ```bash
   npm run dev
