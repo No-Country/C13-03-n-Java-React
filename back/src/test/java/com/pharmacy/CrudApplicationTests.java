@@ -1,4 +1,4 @@
-package com.pharmacy.crud;
+package com.pharmacy;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
