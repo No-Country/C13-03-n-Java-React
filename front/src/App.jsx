@@ -1,9 +1,14 @@
 import './App.css'
+import Navbar from './Pages/Navbar/Navbar'
+import Body from './Pages/Body/Body'
+import Footer from './Pages/Footer/Footer'
 
 function App() {
 	return (
 		<>
-			<h1 className='text-4xl font-bold text-center py-10'>Farmacias de turno</h1>
+			<Navbar />
+			<Body />
+			<Footer />
 		</>
 	)
 }
