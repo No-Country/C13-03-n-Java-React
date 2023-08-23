@@ -1,6 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media screen and (max-width: 700px) {
+	:root {
+		--p-u-center: 0 16px;
+		--p-header-bottom: 16px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	:root {
+		--p-separation: 0;
+		--w-aside: 100%;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	:root {
+		--mw-document: 100%;
+	}
+}
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
