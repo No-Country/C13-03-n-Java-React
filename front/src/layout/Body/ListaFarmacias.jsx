@@ -1,76 +1,82 @@
-import React from 'react'
+import CardFarmacia from './CardFarmacia'
 
-const ListaFarmacias = () => {
-	return (
-		<>
-			<div className='flex p-5 justify-center gap-4'>
-				<div className='card w-96 bg-base-100 shadow-xl'>
-					<div className='card-body'>
-						<h2 className='card-title'>
-							Avenida
-							<div className='badge badge-secondary'>Abierto</div>
-						</h2>
-						<p>Dirección: Avenida Argentina 331, Q8300 Neuquén</p>
-						<p>otro dato</p>
-						<p>otro dato</p>
-						<p>Teléfono: 0299 442-2858</p>
-						<div className='card-actions justify-end'>
-							<div className='badge badge-outline'>Como llegar</div>
-							<div className='badge badge-outline bg-green-400'>whatsapp</div>
-						</div>
-					</div>
-				</div>
-				<div className='card w-96 bg-base-100 shadow-xl'>
-					<div className='card-body'>
-						<h2 className='card-title'>
-							DEL PUEBLO (Alberdi)
-							<div className='badge badge-secondary'>Abierto</div>
-						</h2>
-						<p>Dirección: Alberdi 290, Q8300 Neuquén</p>
-						<p>otro dato</p>
-						<p>otro dato</p>
-						<p>Teléfono: 0299 4424032</p>
-						<div className='card-actions justify-end'>
-							<div className='badge badge-outline'>Como llegar</div>
-							<div className='badge badge-outline bg-green-400 '>whatsapp</div>
-						</div>
-					</div>
-				</div>
-				<div className='card w-96 bg-base-100 shadow-xl'>
-					<div className='card-body'>
-						<h2 className='card-title'>
-							GLOBAL (Illia)
-							<div className='badge badge-secondary'>Abierto</div>
-						</h2>
-						<p>Dirección: ILLIA 774, Q8300 Neuquén</p>
-						<p>otro dato</p>
-						<p>otro dato</p>
-						<p>Teléfono: 0299-154286169</p>
-						<div className='card-actions justify-end'>
-							<div className='badge badge-outline'>Como llegar</div>
-							<div className='badge badge-outline bg-green-400'>whatsapp</div>
-						</div>
-					</div>
-				</div>
-				<div className='card w-96 bg-base-100 shadow-xl'>
-					<div className='card-body'>
-						<h2 className='card-title'>
-							NUEVA INTEGRAL II
-							<div className='badge badge-secondary'>Abierto</div>
-						</h2>
-						<p>Dirección: Cnel Racedo 305, Q8300 Neuquén</p>
-						<p>otro dato</p>
-						<p>otro dato</p>
-						<p>Teléfono: 0299-6589200</p>
-						<div className='card-actions justify-end'>
-							<div className='badge badge-outline'>Como llegar</div>
-							<div className='badge badge-outline bg-green-400'>whatsapp</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	)
+const ListaFarmacias = ({ currentTab = false }) => {
+
+  const allPharmacy = [
+    {
+      direccion: 'Ruta Panamericana Km 36, Tortuguitas, Pcia. de Buenos Aires',
+      telefono: ' (+54 3327) 45 8000/8500',
+      isOpen: true
+    },
+    {
+      direccion: 'Avenida Olivos 4109 altura ruta Panamericana km 35,5 Ramal Pilar',
+      telefono: '(+54 3327) 450620',
+      isOpen: true
+    },
+    {
+      direccion: 'S2001KDK, Rosario, Santa Fe, Argentina',
+      telefono: ' (+54 341) 465 5777',
+      isOpen: true
+    },
+    {
+      direccion: 'Calle Dr. Mariano Moreno 1228',
+      telefono: '(54 11) 4124 7200',
+      isOpen: false
+    },
+    {
+      direccion: 'Calle 1 y 60 La Plata CP 1900',
+      telefono: '051-802163',
+      isOpen: false
+    },
+    {
+      direccion: 'San Fernando del Valle de Catamarca CP 4700',
+      telefono: '0351 4 342175',
+      isOpen: false
+    },
+    {
+      direccion: 'Av. Colon 1775 Barrio Alberdi	Ciudad de Córdoba CP 5000',
+      telefono: '03783 4 30422',
+      isOpen: false
+    },
+    {
+      direccion: 'Caseros 356	Ciudad de Córdoba CP 5000',
+      telefono: '02965 4 81201',
+      isOpen: false
+    },
+    {
+      direccion: 'San Lorenzo 837	Corrientes CP 3400',
+      telefono: '0388 4 221218',
+      isOpen: false
+    }
+  ]
+  return (
+    <div className='flex flex-wrap justify-center gap-4'>
+      {
+        allPharmacy.map(({ direccion, telefono, isOpen }, index) => {
+          if (currentTab && isOpen)
+            return (
+              <CardFarmacia
+                key={index}
+                direccion={direccion}
+                telefono={telefono}
+                isOpen={isOpen}
+              />
+            )
+            
+          if(!currentTab)
+          return (
+            <CardFarmacia
+              key={index}
+              direccion={direccion}
+              telefono={telefono}
+              isOpen={isOpen}
+            />
+          )
+
+        })
+      }
+    </div>
+  )
 }
 
 export default ListaFarmacias
