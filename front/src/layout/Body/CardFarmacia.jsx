@@ -13,7 +13,15 @@ function CardFarmacia({ direccion, telefono, isOpen }) {
 				<p>otro dato</p>
 				<p>Teléfono: {telefono}</p>
 				<div className='card-actions justify-end'>
-					<div className='badge badge-outline'>Como llegar</div>
+					<div className='badge badge-outline'>
+						<a
+							href='https://goo.gl/maps/pBeGFRBdRWgj9hRL6'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Como llegar
+						</a>
+					</div>
 					<div className='badge badge-outline bg-green-400'>whatsapp</div>
 				</div>
 			</div>
