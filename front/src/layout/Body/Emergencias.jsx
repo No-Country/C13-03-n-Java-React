@@ -4,7 +4,7 @@ import EmergenciasResponsive from './EmergenciasResponsive'
 const Emergencias = () => {
 	return (
 		<>
-			<div className='join hidden md:block m-0 mx-auto '>
+			<div className='join m-0 mx-auto flex flex-wrap justify-center gap-4'>
 				<button className='btn join-item'>Emergencias 1</button>
 				<button className='btn join-item'>Emergencias 2</button>
 				<button className='btn join-item'>Emergencias 3</button>
@@ -12,9 +12,8 @@ const Emergencias = () => {
 				<button className='btn join-item'>Emergencias 5</button>
 				<button className='btn join-item'>Emergencias 6</button>
 				<button className='btn join-item'>Emergencias 7</button>
-				<button className='btn join-item'>Emergencias 8</button>
 			</div>
-			<EmergenciasResponsive />
+			{/* <EmergenciasResponsive /> */}
 		</>
 	)
 }
