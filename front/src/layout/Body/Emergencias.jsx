@@ -1,5 +1,4 @@
 import React from 'react'
-import EmergenciasResponsive from './EmergenciasResponsive'
 
 const Emergencias = () => {
 	return (
