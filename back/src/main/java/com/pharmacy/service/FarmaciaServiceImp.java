@@ -36,9 +36,9 @@ public class FarmaciaServiceImp implements FarmaciaService{
     public Farmacia addFarmacia(Farmacia farmacia) {
         return repo.save(farmacia);
     }
-
     @Override
     public Farmacia deleteFarmaciaById(Long id) {
-        return null;
+
+        return repo.remove(id);
     }
 }
