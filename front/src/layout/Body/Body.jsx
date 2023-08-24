@@ -4,18 +4,31 @@ import Carrousel from './Carrousel'
 import CarrouselResponsive from './CarrouselResponsive'
 import ListaFarmacias from './ListaFarmacias'
 import ListaFarmaciasResponsive from './ListaFarmaciasResponsive'
+import ChatBubble from './ChatBubble'
+import Tabs from './Tabs'
+import { useState } from 'react'
+
 
 const Body = () => {
-	return (
-		<>
-			{/* pasar debajo de lista de farmacias */}
-			<Emergencias />
-			{/* <Carrousel />
+  const [currentTab, setCurrentTab] = useState(true)
+
+  return (
+    <>
+      {/* pasar debajo de lista de farmacias */}
+      <Emergencias />
+      {/* <Carrousel />
 			<CarrouselResponsive /> */}
-			<ListaFarmacias />
-			<ListaFarmaciasResponsive />
-		</>
-	)
+      <Tabs 
+        currentTab={currentTab}
+        setCurrentTab={setCurrentTab}
+      />
+      <ListaFarmacias
+        currentTab={currentTab}
+      />
+      <ListaFarmaciasResponsive />
+      <ChatBubble />
+    </>
+  )
 }
 
 export default Body
