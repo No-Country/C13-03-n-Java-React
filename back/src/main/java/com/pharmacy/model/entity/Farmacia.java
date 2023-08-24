@@ -14,16 +14,16 @@ import lombok.NoArgsConstructor;
 public class Farmacia {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idFarmacia;
 
     String nombre;
     String direccion;
     String telefono;
-    int aperturaHora;
-    int aperturaMinuto;
-    int cierraHora;
-    int cierreMinuto;
+    Integer aperturaHora;
+    Integer aperturaMinuto;
+    Integer cierraHora;
+    Integer cierreMinuto;
     String ubicacion;
     String email;
 

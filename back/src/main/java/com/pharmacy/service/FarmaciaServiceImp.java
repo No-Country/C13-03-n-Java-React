@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FarmaciaServiceImp implements FarmaciaService{
@@ -37,8 +38,8 @@ public class FarmaciaServiceImp implements FarmaciaService{
         return repo.save(farmacia);
     }
     @Override
-    public Farmacia deleteFarmaciaById(Long id) {
+    public void deleteFarmaciaById(Long id) {
 
-        return repo.remove(id);
+         repo.deleteById(id);
     }
 }
