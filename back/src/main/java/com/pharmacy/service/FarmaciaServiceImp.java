@@ -1,5 +1,6 @@
 package com.pharmacy.service;
 
+import com.pharmacy.controller.FarmaciaController;
 import com.pharmacy.model.entity.Farmacia;
 import com.pharmacy.repository.FarmaciaRepository;
 import org.springframework.beans.BeanUtils;
@@ -22,7 +23,9 @@ public class FarmaciaServiceImp implements FarmaciaService{
 
     @Override
     public Farmacia getFarmaciaById(Long id) {
-        return repo.findById(id).get();
+         Optional<Farmacia> farmacia = repo.findById(id);
+         return    farmacia.orElse(null);
+
     }
 
     @Override
